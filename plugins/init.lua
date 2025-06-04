@@ -2,7 +2,7 @@ return {
   { import = "nvchad.blink.lazyspec" },
   {
     "stevearc/conform.nvim",
-    event = 'BufWritePre', -- uncomment for format on save
+    event = "BufWritePre", -- uncomment for format on save
     opts = require "configs.conform",
   },
 
@@ -122,6 +122,18 @@ return {
     config = function()
       require("ccc").setup()
     end,
+  },
+
+  -- Markdown preview
+  {
+    "OXY2DEV/markview.nvim",
+    lazy = false,
+
+    -- For blink.cmp's completion
+    -- source
+    -- dependencies = {
+    --     "saghen/blink.cmp"
+    -- },
   },
 
   -- {
