@@ -11,14 +11,16 @@ M.override = {
     -- bg = "#272630"
     bg = "#292630",
     -- bg = "#171820"
-    -- bg = "black2"
+    -- bg = "black2",
   },
   Comment = {
     italic = true,
+    fg = "#696969",
   },
 
   ["@comment"] = {
     italic = true,
+    fg = "#505055",
   },
 
   -- keyword

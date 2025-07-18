@@ -27,7 +27,7 @@ return {
   -- animation identation
   {
     "echasnovski/mini.indentscope",
-    lazy = false,
+    event = "BufReadPre",
     opts = {
       symbol = "│",
       options = { try_as_border = true },
@@ -128,41 +128,18 @@ return {
   -- Markdown preview
   {
     "OXY2DEV/markview.nvim",
-    lazy = false,
-
-    -- For blink.cmp's completion
-    -- source
-    -- dependencies = {
-    --     "saghen/blink.cmp"
-    -- },
+    ft = { "markdown" },
   },
 
-  -- {
-  --   "folke/noice.nvim",
-  --   event = "VeryLazy",
-  --   config = function()
-  --     require("noice").setup({
-  --       cmdline = {
-  --         enabled = true,
-  --         view = "cmdline"
-  --       },
-  --       -- lsp = {
-  --       --   -- override markdown rendering so that **cmp** and other plugins use **Treesitter**
-  --       --   override = {
-  --       --     ["vim.lsp.util.convert_input_to_markdown_lines"] = true,
-  --       --     ["vim.lsp.util.stylize_markdown"] = true,
-  --       --     ["cmp.entry.get_documentation"] = true, -- requires hrsh7th/nvim-cmp
-  --       --   },
-  --       -- },
-  --       -- you can enable a preset for easier configuration
-  --       presets = {
-  --         bottom_search = true,         -- use a classic bottom cmdline for search
-  --         command_palette = true,       -- position the cmdline and popupmenu together
-  --         long_message_to_split = true, -- long messages will be sent to a split
-  --         inc_rename = false,           -- enables an input dialog for inc-rename.nvim
-  --         lsp_doc_border = true,        -- add a border to hover docs and signature help
-  --       },
-  --     })
-  --   end
-  -- }
+  -- Semar cursor
+  {
+    "sphamba/smear-cursor.nvim",
+    opts = {
+      cursor_color = "#BA68C8",
+      trailing_stiffness = 0.5,
+      stiffness = 0.8,
+      distance_stop_animating = 1,
+    },
+    event = "VeryLazy",
+  },
 }
