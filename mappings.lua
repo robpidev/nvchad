@@ -33,3 +33,12 @@ map("n", "<leader>de", "<cmd>lua require'dapui'.eval()<CR>", { desc = "Evaluate"
 -- color picker
 map("n", "<leader>pc", "<cmd>:CccPick<CR>", { desc = "Color Picker" })
 map("i", "<C-c>", "<ESC>:CccPick<CR>", { desc = "Color Picker" })
+
+-- Ejecute last command in the terminal
+map({ "n", "i", "t" }, "<A-;>", function()
+  require("nvchad.term").toggle { pos = "sp", id = "htoggleTerm" }
+  vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes("<UP><CR>", true, false, true), "n", true)
+end, { desc = "terminal" })
+
+-- Last command editor
+map({ "n", "i", "t" }, "<A-.>", "<ESC>:<Up><CR>", { desc = "Last command editor" })
