@@ -20,6 +20,10 @@ vim.opt.shell = "pwsh"
 -- vim.opt.shellquote = ""
 -- vim.opt.shellxquote = ""
 
+vim.cmd [[
+set nowrap
+]]
+
 -- Cargar configuraciones específicas del proyecto si existen
 vim.lsp.inlay_hint.enable(true)
 
