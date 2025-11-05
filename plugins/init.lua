@@ -132,16 +132,16 @@ return {
   },
 
   -- Semar cursor
-  {
-    "sphamba/smear-cursor.nvim",
-    opts = {
-      cursor_color = "#BA68C8",
-      trailing_stiffness = 0.5,
-      stiffness = 0.8,
-      distance_stop_animating = 1,
-    },
-    event = "VeryLazy",
-  },
+  -- {
+  --   "sphamba/smear-cursor.nvim",
+  --   opts = {
+  --     cursor_color = "#BA68C8",
+  --     trailing_stiffness = 0.5,
+  --     stiffness = 0.8,
+  --     distance_stop_animating = 1,
+  --   },
+  --   event = "VeryLazy",
+  -- },
 
   -- Multicursor
   {
