@@ -39,3 +39,16 @@ end, { desc = "terminal" })
 
 -- Last command editor
 map({ "n", "i", "t" }, "<A-.>", "<ESC>:<Up><CR>", { desc = "Last command editor" })
+
+-- Codeium
+map("i", "<A-]>", "<cmd>call codeium#CycleCompletions(1)<CR>", {
+  desc = "Codeium next completion",
+})
+
+map("i", "<A-[>", "<cmd>call codeium#CycleCompletions(-1)<CR>", {
+  desc = "Codeium previous completion",
+})
+
+map("i", "<A-Enter>", function()
+  return vim.fn["codeium#Accept"]()
+end, { desc = "Codeium accpet", expr = true })
