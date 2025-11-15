@@ -7,13 +7,10 @@ local map = vim.keymap.set
 map("n", ";", ":", { desc = "CMD enter command mode" })
 map("i", "jk", "<ESC>")
 
--- map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")
-
 -- Save and exit
-map("n", "<C-s>", ":w<CR>", { desc = "Save" })
-map("i", "<C-s>", "<ESC>:w<CR>a", { desc = "Save" })
-map("n", "<C-q>", ":q<CR>", { desc = "quit" })
-map("n", "<leader>qq", ":qall!<CR>", { desc = "quit" })
+map({ "n", "i", "v" }, "<C-s>", "<cmd>w<CR>", { desc = "Save", silent = false })
+map("n", "<C-q>", "<cmd>q<CR>", { desc = "quit" })
+map("n", "<leader>qq", "<cmd>qall!<CR>", { desc = "quit" })
 
 -- Dap
 map("n", "<leader>db", "<cmd>lua require'dap'.toggle_breakpoint()<CR>", { desc = "Toggle Breakpoint" })
