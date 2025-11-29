@@ -9,6 +9,7 @@ local servers = {
   "rust_analyzer",
   -- "ruff",
   -- "pyrefly",
+  "qmlls",
   "pyment",
   "pyright",
 }

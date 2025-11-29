@@ -144,8 +144,8 @@ return {
   -- },
 
   -- Multicursor
-  {
-    "mg979/vim-visual-multi",
-    event = "BufEnter",
-  },
+  -- {
+  --   "mg979/vim-visual-multi",
+  --   event = "BufEnter",
+  -- },
 }
