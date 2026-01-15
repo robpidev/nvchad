@@ -7,11 +7,14 @@ local servers = {
   "ts_ls",
   "cssls",
   "rust_analyzer",
-  -- "ruff",
+  "ruff",
+  -- "jedi_language_server",
+  -- "clangd",
   -- "pyrefly",
   "qmlls",
   "pyment",
   "pyright",
+  "texlab",
 }
 
 -- read :h vim.lsp.config for changing options of lsp servers

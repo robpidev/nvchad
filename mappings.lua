@@ -8,7 +8,7 @@ map("n", ";", ":", { desc = "CMD enter command mode" })
 map("i", "jk", "<ESC>")
 
 -- Save and exit
-map({ "n", "i", "v" }, "<C-s>", "<cmd>w<CR>", { desc = "Save", silent = false })
+map({ "n", "i", "v" }, "<C-s>", "<cmd>noautocmd w<CR>", { desc = "Save", silent = true })
 map("n", "<C-q>", "<cmd>q<CR>", { desc = "quit" })
 map("n", "<leader>qq", "<cmd>qall!<CR>", { desc = "quit" })
 
