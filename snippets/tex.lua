@@ -1,0 +1,71 @@
+local ls = require "luasnip"
+local s = ls.snippet
+local t = ls.text_node
+local i = ls.insert_node
+
+return {
+  s("docbase", {
+    t {
+      "\\documentclass[a4paper,12pt]{article}",
+      "",
+      "% Math",
+      "\\usepackage{amsmath}",
+      "\\usepackage{amsfonts}",
+
+      "",
+      "% Graphics",
+      "\\usepackage{graphicx}",
+      "\\usepackage{caption}",
+      "\\usepackage{subcaption}",
+      "\\usepackage{float}",
+      "\\usepackage{tikz}",
+      "\\usetikzlibrary{arrows.meta, positioning}",
+      "",
+      "% ==== Apa style ====",
+      "\\usepackage[spanish]{babel}",
+      "%\\usepackage{setspace}",
+      "\\usepackage[utf8]{inputenc}",
+      "",
+      "% Bibliography",
+      "\\usepackage{csquotes}",
+      "\\usepackage[style=apa, backend=biber]{biblatex}",
+      "\\addbibresource{references.bib}",
+      "",
+      "% Margins",
+      "\\usepackage{geometry}",
+      "\\geometry{left=2cm, right=2cm, top=2cm, bottom=2cm}",
+      "",
+      "% ======== hyperref ============",
+      "\\usepackage{xcolor}",
+      "\\usepackage[",
+      "    colorlinks=true,",
+      "    linkcolor=blue!60!black,",
+      "    citecolor=green!50!black,",
+      "    urlcolor=cyan!60!black,",
+      "    filecolor=magenta!60!black",
+      "]{hyperref}",
+      "\\author{",
+    },
+    i(1, "Autor"),
+    t {
+      "}",
+      "\\title{",
+    },
+    i(2, "Título"),
+    t {
+      "}",
+      "\\begin{document}",
+      "%  \\doublespacing",
+      "  \\maketitle",
+      "  \\tableofcontents",
+      "  \\newpage",
+      "  ",
+    },
+    i(0),
+    t {
+      "",
+      "  % \\printbibliography{}",
+      "\\end{document}",
+    },
+  }),
+}

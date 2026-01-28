@@ -30,6 +30,9 @@ vim.lsp.inlay_hint.enable(true)
 -- Cmdline only shows in cmd
 vim.o.cmdheight = 0
 
+-- snipts
+vim.g.lua_snippets_path = vim.fn.stdpath "config" .. "/lua/snippets"
+
 -- Manim
 
 --- manim LastN
