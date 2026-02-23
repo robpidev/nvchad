@@ -4,6 +4,8 @@ local options = {
     python = { "ruff" },
     css = { "prettier" },
     html = { "prettier" },
+    javascript = { "prettier" },
+    svelte = { "prettier" },
   },
 
   format_on_save = {
