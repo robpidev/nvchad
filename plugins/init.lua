@@ -84,6 +84,7 @@ return {
       "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
       "MunifTanjim/nui.nvim",
     },
+    event = "VeryLazy",
     config = function()
       require "configs.neo-tree"
     end,
@@ -139,8 +140,8 @@ return {
     ft = { "tex" },
     init = function()
       vim.g.vimtex_view_method = "zathura"
-      vim.g.vimtex_syntax_conceal_disable = 0  -- Mostrar símbolos bonitos
-    -- Personalizar qué se oculta/embellece
+      vim.g.vimtex_syntax_conceal_disable = 0 -- Mostrar símbolos bonitos
+      -- Personalizar qué se oculta/embellece
       vim.g.vimtex_syntax_conceal = {
         accents = 1,
         cites = 1,
@@ -153,7 +154,7 @@ return {
         math_symbols = 1,
         sections = 0,
         styles = 1,
-    }
+      }
     end,
   },
 
@@ -174,4 +175,7 @@ return {
   --   "mg979/vim-visual-multi",
   --   event = "BufEnter",
   -- },
+  --
+
+  -- Menu
 }
