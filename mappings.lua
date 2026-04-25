@@ -53,5 +53,5 @@ map("i", "<A-Enter>", function()
   return vim.fn["codeium#Accept"]()
 end, { desc = "Codeium accpet", expr = true })
 
-map({ "n", "i", "t" }, "<C-n>", "<cmd>Neotree toggle<CR>", { desc = "NeoTree" })
+map({ "n", "i", "t" }, "<C-n>", "<cmd>Neotree toggle<CR>", { desc = "NeoTree", silent = true })
 map("n", "<leader>e", "<cmd>Neotree toggle<CR>", { desc = "NeoTree", silent = true })

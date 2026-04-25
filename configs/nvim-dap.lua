@@ -1,4 +1,40 @@
 local dap = require "dap"
+
+vim.fn.sign_define("DapBreakpoint", {
+  text = "", -- icono del breakpoint normal
+  texthl = "DapBreakpoint",
+  linehl = "",
+  numhl = "DapBreakpoint",
+})
+
+vim.fn.sign_define("DapBreakpointCondition", {
+  text = "", -- breakpoint condicional
+  texthl = "DapBreakpointCondition",
+  linehl = "",
+  numhl = "DapBreakpointCondition",
+})
+
+vim.fn.sign_define("DapBreakpointRejected", {
+  text = "", -- breakpoint rechazado por el adaptador
+  texthl = "DapBreakpointRejected",
+  linehl = "",
+  numhl = "DapBreakpointRejected",
+})
+
+vim.fn.sign_define("DapLogPoint", {
+  text = "", -- logpoint (no detiene, solo loguea)
+  texthl = "DapLogPoint",
+  linehl = "",
+  numhl = "DapLogPoint",
+})
+
+vim.fn.sign_define("DapStopped", {
+  text = "", -- línea donde está parado el debugger
+  texthl = "DapStopped",
+  linehl = "DapStoppedLine",
+  numhl = "DapStopped",
+})
+
 dap.adapters.lldb = {
   type = "executable",
   command = "lldb-vscode", -- adjust as needed, must be absolute path

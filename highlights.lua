@@ -209,6 +209,10 @@ M.add = {
   RainbowDelimiterTeal = { fg = "#00BFA5" },
   RainbowDelimiterviolet = { fg = "#946eaD" },
   RainbowDelimiterMoon = { fg = "#c4aA6D" },
+  DapBreakpoint = { fg = "#e8003b" },
+  DapStopped = { fg = "#98c379" },
+  DapBreakpointCondition = { fg = "#f5a623" },
+  DapStoppedLine = { bg = "#2e3a2e" },
 }
 
 return M
