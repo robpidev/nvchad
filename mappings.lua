@@ -28,8 +28,8 @@ map("n", "<leader>du", "<cmd>lua require'dapui'.toggle()<CR>", { desc = "Toggle 
 map("n", "<leader>de", "<cmd>lua require'dapui'.eval()<CR>", { desc = "Evaluate" })
 
 -- color picker
-map("n", "<leader>pc", "<cmd>:CccPick<CR>", { desc = "Color Picker" })
-map("i", "<C-c>", "<ESC>:CccPick<CR>", { desc = "Color Picker" })
+map("n", "<leader>pc", "<cmd>Huefy<CR>", { desc = "Color Picker" })
+map("i", "<C-c>", "<cmd>Huefy<CR>", { desc = "Huefy color picker" })
 
 -- Ejecute last command in the terminal
 map({ "n", "i", "t" }, "<A-;>", function()
@@ -53,5 +53,5 @@ map("i", "<A-Enter>", function()
   return vim.fn["codeium#Accept"]()
 end, { desc = "Codeium accpet", expr = true })
 
-map({ "n", "i", "t" }, "<C-n>", "<cmd>:Neotree toggle<CR>", { desc = "NeoTree" })
-map("n", "<leader>e", "<cmd>:Neotree toggle<CR>", { desc = "NeoTree" })
+map({ "n", "i", "t" }, "<C-n>", "<cmd>Neotree toggle<CR>", { desc = "NeoTree" })
+map("n", "<leader>e", "<cmd>Neotree toggle<CR>", { desc = "NeoTree", silent = true })

@@ -14,6 +14,10 @@ local M = {
       --   tailwind = true,
       -- }
     },
+
+    tabufline = {
+      treeOffsetFt = "neo-tree",
+    },
   },
 }
 

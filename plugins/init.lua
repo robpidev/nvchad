@@ -83,6 +83,7 @@ return {
       "nvim-lua/plenary.nvim",
       "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
       "MunifTanjim/nui.nvim",
+      "folke/snacks.nvim",
     },
     event = "VeryLazy",
     config = function()
@@ -114,18 +115,6 @@ return {
       "nvim-lua/plenary.nvim",
       "nvim-neotest/nvim-nio",
     },
-  },
-
-  -- color picker
-  {
-    "uga-rosa/ccc.nvim",
-    keys = { "<leader>p" },
-    cmd = "CccPick",
-    -- lazy = false,
-    -- ft = { "html", "css", "scss", "svelte" },
-    config = function()
-      require("ccc").setup()
-    end,
   },
 
   -- Markdown preview
@@ -178,4 +167,10 @@ return {
   --
 
   -- Menu
+
+  { "nvzone/volt",                   lazy = true },
+  {
+    "nvzone/minty",
+    cmd = { "Shades", "Huefy" },
+  },
 }
