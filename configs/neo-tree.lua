@@ -3,7 +3,7 @@ local neo = require "neo-tree"
 neo.setup {
   window = {
     --   position = "left",
-    width = 30,
+    -- width = 30,
   },
   filesystem = {
     follow_current_file = true,
