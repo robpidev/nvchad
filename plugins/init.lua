@@ -85,11 +85,13 @@ return {
       "MunifTanjim/nui.nvim",
       "folke/snacks.nvim",
     },
-    event = "VeryLazy",
+    -- cmd leader + e or ctrl + n
+    -- keys = { "<leader>e", "<C-n>" },
+    -- event = "VeryLazy",
     config = function()
       require "configs.neo-tree"
     end,
-    -- lazy = false,
+    lazy = false,
   },
 
   -- nvim-tree
