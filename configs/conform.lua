@@ -6,6 +6,7 @@ local options = {
     html = { "prettier" },
     javascript = { "prettier" },
     svelte = { "prettier" },
+    tex = { "tex-fmt" }
   },
 
   format_on_save = {

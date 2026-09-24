@@ -1,6 +1,5 @@
 return {
   { import = "nvchad.blink.lazyspec" },
-
   {
     "stevearc/conform.nvim",
     event = "BufWritePre", -- uncomment for format on save
@@ -25,6 +24,37 @@ return {
   -- 	},
   -- },
 
+  {
+    'Thiago4532/mdmath.nvim',
+    dependencies = {
+      'nvim-treesitter/nvim-treesitter',
+    },
+    opts = {
+      filetypes = { 'markdown' },
+      foreground = 'Normal',
+      anticonceal = true,
+      hide_on_insert = true,
+      dynamic = true,
+      dynamic_scale = 1.0,
+      update_interval = 400,
+      internal_scale = 1.0,
+    },
+  },
+
+  -- flash
+  {
+    "folke/flash.nvim",
+    event = "VeryLazy",
+    opts = {},
+    keys = {
+      { "s",     mode = { "n", "x", "o" }, function() require("flash").jump() end,              desc = "Flash" },
+      { "S",     mode = { "n", "x", "o" }, function() require("flash").treesitter() end,        desc = "Flash Treesitter" },
+      { "r",     mode = "o",               function() require("flash").remote() end,            desc = "Remote Flash" },
+      { "R",     mode = { "o", "x" },      function() require("flash").treesitter_search() end, desc = "Treesitter Search" },
+      { "<c-s>", mode = { "c" },           function() require("flash").toggle() end,            desc = "Toggle Flash Search" },
+    },
+  },
+
   -- animation identation
   {
     "echasnovski/mini.indentscope",
@@ -48,10 +78,19 @@ return {
     },
   },
 
-  -- codium
+
   {
-    "Exafunction/codeium.vim",
-    event = "BufEnter",
+    "supermaven-inc/supermaven-nvim",
+    event = "InsertEnter",
+    config = function()
+      require("supermaven-nvim").setup({
+        keymaps = {
+          accept_suggestion = "<A-CR>",
+          clear_suggestion = "<A-Delete>",
+          accept_word = "<CR-Space>",
+        },
+      })
+    end,
   },
 
   -- todo-coments
@@ -123,6 +162,11 @@ return {
   {
     "OXY2DEV/markview.nvim",
     ft = { "markdown" },
+    opts = {
+      latex = {
+        enabled = false,
+      }
+    }
   },
 
   -- LaTex

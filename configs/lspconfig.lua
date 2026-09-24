@@ -15,6 +15,7 @@ local servers = {
   "pyment",
   "pyright",
   "texlab",
+  "ltex_lus",
 }
 
 -- read :h vim.lsp.config for changing options of lsp servers
@@ -32,6 +33,15 @@ vim.lsp.config.pyright = {
         -- diagnosticMode = "workspace",
         --
       },
+    },
+  },
+}
+
+vim.lsp.config.ltex_plus = {
+  settings = {
+    ltex = {
+      language = "auto", -- detecta español e inglés solo
+      filetypes = { "tex", "markdown", "text" },
     },
   },
 }
