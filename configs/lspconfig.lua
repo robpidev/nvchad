@@ -8,12 +8,13 @@ local servers = {
   "cssls",
   "rust_analyzer",
   "ruff",
+  "ty",
   -- "jedi_language_server",
   -- "clangd",
   -- "pyrefly",
   "qmlls",
   "pyment",
-  "pyright",
+  -- "pyright",
   "texlab",
   "ltex_lus",
 }
@@ -21,21 +22,21 @@ local servers = {
 -- read :h vim.lsp.config for changing options of lsp servers
 -- Add inlay_hints all servers
 -- create on_attach function
-
-vim.lsp.config.pyright = {
-  settings = {
-    python = {
-      analysis = {
-        typeCheckingMode = "off",
-        -- extraPaths = { "./" },
-        autoImportCompletions = true,
-        autoSearchPaths = true,
-        -- diagnosticMode = "workspace",
-        --
-      },
-    },
-  },
-}
+--
+-- vim.lsp.config.pyright = {
+--   settings = {
+--     python = {
+--       analysis = {
+--         typeCheckingMode = "off",
+--         -- extraPaths = { "./" },
+--         autoImportCompletions = true,
+--         autoSearchPaths = true,
+--         -- diagnosticMode = "workspace",
+--         --
+--       },
+--     },
+--   },
+-- }
 
 vim.lsp.config.ltex_plus = {
   settings = {
