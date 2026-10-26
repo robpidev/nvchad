@@ -42,3 +42,12 @@ mv nvchad lua
 I configured the Ayu Dark theme for this
 open nvim and set the theme
 Enjoy!
+
+## 4. Keymaps
+
+Default  ```<leader>``` is ```Space``` for easy access
+
+For view all keymaps open nvim and type
+```shell
+<leader>ch
+``````

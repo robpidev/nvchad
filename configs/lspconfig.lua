@@ -6,7 +6,7 @@ local servers = {
   "svelte",
   "ts_ls",
   "cssls",
-  "rust_analyzer",
+  -- "rust_analyzer",
   "ruff",
   "ty",
   -- "jedi_language_server",
