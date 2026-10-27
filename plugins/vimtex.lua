@@ -30,10 +30,10 @@ return {
     },
     ft = { "tex", "latex", "markdown", "rmd", "quarto" },
     opts = {
-      setup_keymap = true, -- <leader>ih: inspect here
-      hover = { auto_open = true }, -- open previews with the keymap
-      cache = true, -- reuse saved-buffer renders across sessions
-      cache_dir = "aux", -- <buffer-directory>/aux/latex-preview-cache/
+      setup_keymap = true,           -- <leader>ih: inspect here
+      hover = { auto_open = false }, -- open previews with the keymap
+      cache = true,                  -- reuse saved-buffer renders across sessions
+      cache_dir = "aux",             -- <buffer-directory>/aux/latex-preview-cache/
       render = { font_size = 8 },
       references = {
         enable = true,
